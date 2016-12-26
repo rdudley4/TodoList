@@ -1,0 +1,28 @@
+/* --------------------------
+  Base Styles
+--------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+  color           : #333;
+  font-family     : Lato, sans-serif;
+}
+
+svg * {
+  transform-origin: 50% 50%;
+}
+
+.container {
+  display         : block;
+  max-width       : 450px;
+  margin          : 30px auto 0;
+  padding         : 30px;
+  border-radius   : 5px;
+  box-shadow      : 0 0 10px #aaa;
+  background-color: darken(#fff, 4%);
+}

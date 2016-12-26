@@ -1,0 +1,40 @@
+/* --------------------------
+  Logo Animations
+--------------------------- */
+
+.monitor {
+  animation: slideDown 1s ease-out 0s forwards;
+}
+
+.screen-bg,
+.paper {
+  animation: grow 1s .6s backwards;
+}
+
+.paper {
+  animation-delay: .9s;
+}
+
+.text {
+  animation: slideIn .35s ease-out 1.9s forwards;
+
+  &:nth-of-type(2) {
+    animation-delay: 1.6s;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: 1.3s;
+  }
+}
+
+.check {
+  animation: slideIn .35s ease-out 1.9s forwards;
+
+  &:nth-of-type(2) {
+    animation-delay: 1.6s;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: 1.3s;
+  }
+}

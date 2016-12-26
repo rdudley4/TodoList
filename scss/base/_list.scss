@@ -1,0 +1,34 @@
+/* --------------------------
+  List Styles
+--------------------------- */
+
+ul {
+  margin : 0;
+  padding: 0;
+}
+
+/* Task list */
+
+li {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding        : 20px 0;
+  border-bottom  : 1px solid #eee;
+}
+
+li>label,
+li>input[type="text"] {
+  width: 200px;
+}
+
+li>.delete:hover {
+  color: #CF2323;
+}
+
+/* Completed */
+
+#completed-tasks label {
+  text-decoration: line-through;
+  color          : #888;
+}

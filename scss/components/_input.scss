@@ -1,0 +1,57 @@
+/* --------------------------
+  Form Element Styles
+--------------------------- */
+
+input[type="text"] {
+  margin       : 0;
+  font-size    : 18px;
+  padding      : 10px;
+  border       : 1px solid #ddd;
+  background   : #fff;
+  border-radius: 6px;
+  font-family  : Lato, sans-serif;
+  color        : #888;
+
+  &:focus {
+    color: #333;
+  }
+}
+
+.input-container {
+  display       : flex;
+  flex-direction: row;
+}
+
+#new-task {
+  flex-grow: 1;
+}
+
+h3,
+label[for='new-task'] {
+  color         : #555;
+  font-weight   : 700;
+  font-size     : 15px;
+  border-bottom : 1px solid #bbb;
+  padding       : 30px 0 10px;
+  margin        : 0;
+  text-transform: uppercase;
+}
+
+label[for='new-task'] {
+  display: block;
+  margin : 0 0 20px;
+}
+
+/* Edit Task */
+
+ul li input[type=text] {
+  display: none;
+}
+
+ul li.editMode input[type=text] {
+  display: block;
+}
+
+ul li.editMode label {
+  display: none;
+}

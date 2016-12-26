@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Todo App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css" type="text/css" media="screen" charset="utf-8">
+</head>
+
+<body>
+  
+  <!-- SVG Sprite -->
+  <defs>  
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><symbol id="add" viewBox="0 0 512 512"><title>add</title><rect x="7.918" y="7.918" style="fill:#E6E6E6;" width="496.165" height="496.165"/><rect x="44.866" y="44.866" style="fill:#43B05C;" width="422.268" height="422.268"/><rect x="44.866" y="44.866" style="fill:#00A65D;" width="211.134" height="422.268"/><path d="M512,512H0V0h512V512z M15.835,496.165h480.33V15.835H15.835V496.165z"/><polygon points="419.629,248.082 263.918,248.082 263.918,92.371 248.082,92.371 248.082,248.082 92.371,248.082 92.371,263.918 248.082,263.918 248.082,419.629 263.918,419.629 263.918,263.918 419.629,263.918 "/><path d="M475.052,475.052H36.948V36.948h438.103V475.052z M52.784,459.217h406.433V52.784H52.784V459.217z"/></symbol></svg>
+  </defs>
+  <!-- End SVG Sprite -->
+
+  <div class="container">
+
+    <div class="site-logo">
+      <!-- Site Logo SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.013 512.013">
+        <g class="monitor" fill="#242D3C">
+          <path d="M333.43 512H178.586v-51.612h19.212v32.4h116.42v-32.4h19.212"/>
+          <path d="M149.51 492.8H362.55v19.213H149.51z"/>
+          <path d="M496.172 388.846H15.84V83.12c0-6.9 2.692-13.398 7.577-18.285s11.395-7.578 18.324-7.578h85.536V76.47H41.74c-1.27 0-3.122.335-4.738 1.95-1.26 1.26-1.95 2.927-1.95 4.7v286.51h441.91V83.12c0-1.747-.71-3.41-1.99-4.7-1.26-1.27-2.9-1.95-4.662-1.95h-85.57V57.257h85.57c6.936 0 13.43 2.706 18.287 7.62 4.872 4.873 7.58 11.365 7.58 18.244v305.726h-.005z"/>
+          <path d="M470.295 443.077H41.713c-6.956 0-13.46-2.698-18.32-7.6-4.853-4.832-7.556-11.334-7.556-18.274V369.63H496.17v47.573c0 6.935-2.71 13.44-7.626 18.327-4.8 4.844-11.3 7.547-18.25 7.547zm-435.243-54.23v28.36c0 1.786.69 3.452 1.938 4.69 1.705 1.72 3.69 1.97 4.726 1.97h428.582c1.032 0 3.008-.248 4.657-1.912 1.313-1.303 2.007-2.97 2.007-4.746v-28.36H35.052v-.004z"/>
+        </g>
+        <g class="screen-bg" fill="#43D3E8">
+          <path d="M384.747 105.293h63.41v235.52h-63.41z"/>
+          <path d="M63.88 105.293h63.396v235.52H63.88z"/>
+        </g>
+        <g class="paper" fill="#242D3C">
+          <path d="M394.342 340.813H375.13V70.856l-51.654-51.643H136.88v321.6H117.67V0h213.765l62.91 62.902"/>
+          <path d="M384.737 76.472h-66.893V9.597h19.218v47.66h47.675"/>
+        </g>
+        <g class="paper-contents">
+          <g class="text" fill="#242D3C">
+            <path d="M242.437 250.445h99.917v19.213h-99.917z"/>
+            <path d="M242.437 281.19h99.917v19.218h-99.917z"/>
+          </g>
+          <path class="check" fill="#F96232" d="M189.12 300.393l-26.665-26.66 14.42-14.43 12.235 12.23 23.508-23.52 14.428 14.423"/>
+          <g class="text" fill="#242D3C">
+            <path d="M242.437 181.274h99.917v19.213h-99.917z"/>
+            <path d="M242.437 212.02h99.917v19.212h-99.917z"/>
+          </g>
+          <path class="check" fill="#F96232" d="M189.12 231.224l-26.665-26.657 14.42-14.433 12.235 12.234 23.508-23.526 14.428 14.423"/>
+          <g class="text" fill="#242D3C">
+            <path d="M242.437 112.105h99.917v19.218h-99.917z"/>
+            <path d="M242.437 142.848h99.917v19.213h-99.917z"/>
+          </g>
+          <path class="check" fill="#F96232" d="M189.12 162.056l-26.665-26.658 14.42-14.435 12.235 12.234 23.508-23.524 14.428 14.423"/>
+        </g>
+      </svg>
+      <!-- End SVG -->
+      <h2 class="logo-text">List Application</h2>
+    </div>
+
+    <div id="add-item">
+      <label for="new-task">Add Item</label>
+      <div class="input-container">
+        <input id="new-task" type="text">
+        <button>
+          <svg class="icon">
+            <use xlink:href="#add" />
+          </svg> 
+        </button>
+      </div>
+    </div>
+
+    <h3>Todo</h3>
+    <ul id="incomplete-tasks">
+      <li>
+        <input class="completion" type="checkbox">
+        <label>Example Item</label>
+        <input type="text">
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+      </li>
+      
+      <li>
+        <input class="completion" type="checkbox">
+        <label>Go Shopping</label>
+        <input type="text">
+        <button class="edit">Edit</button>
+        <button class="delete">Delete</button>
+      </li>
+    </ul>
+
+    <h3>Completed</h3>
+    <ul id="completed-tasks">
+      <!-- To be populated by script. -->
+    </ul>
+
+  </div>
+  <script type="text/javascript" src="js/compiled/app-compiled.js" async></script>
+</body>
+
+</html>

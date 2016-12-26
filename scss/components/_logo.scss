@@ -1,0 +1,40 @@
+/* --------------------------
+  Logo Styles
+--------------------------- */
+
+.site-logo {
+  display       : flex;
+  flex-direction: column;
+
+  svg {
+    max-width: 150px;
+    margin   : auto;
+  }
+}
+
+.monitor {
+  transform: translate3d(0, -512px, 0);
+}
+
+.text {
+  transform: translate3d(270px, 0, 0);
+}
+
+.check {
+  transform: translate3d(-225px, 0, 0);
+}
+
+.logo-text {
+  font-family   : "Oswald", sans-serif;
+  font-weight   : 300;
+  text-transform: uppercase;
+  width         : 75%;
+  margin        : 2rem auto 0;
+  text-align    : center;
+  border        : 2px solid #242d3c;
+  padding       : 10px 15px;
+  border-radius : 5px;
+  color         : #F96232;
+  opacity       : 0;
+  animation     : fadeIn 1s ease-out 2s forwards; 
+}

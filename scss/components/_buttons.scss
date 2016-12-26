@@ -1,0 +1,63 @@
+/* --------------------------
+  Button Styles
+--------------------------- */
+
+button {
+  background : none;
+  border     : 0px;
+  color      : #888;
+  font-family: Lato, sans-serif;
+  cursor     : pointer;
+}
+
+p>button:hover {
+  color: #0FC57C;
+}
+
+.icon {
+  max-width : 100%;
+}
+
+#add-item {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    padding-right: 0;
+    max-width    : 50px;
+  }
+
+  button:hover .icon {
+    filter: grayscale(0%);
+  }
+
+  .icon {
+    filter    : grayscale(100%);
+    transition: filter .3s ease-out;
+    height    : 50px;
+  }
+}
+
+#incomplete-tasks,
+#completed-tasks {
+
+  button {
+    background-color: #ccc;
+    border-bottom   : 2px solid #bbb;
+    padding         : 5px 10px;
+    border-radius   : 5px;
+    transition      : all .3s ease-out;
+  }
+
+  .edit:hover {
+    background-color   : #0FC57C;
+    border-bottom-color: darken(#0fc57c, 5%);
+    color              : #fff;
+  }
+
+  .delete:hover {
+    background-color   : tomato;
+    border-bottom-color: darken(tomato, 5%);
+    color              : #fff;
+  }
+}

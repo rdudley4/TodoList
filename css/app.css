@@ -1,0 +1,307 @@
+/* --------------------------
+  Main SCSS File
+--------------------------- */
+/* --------------------------
+  Functional Style Imports
+--------------------------- */
+/* --------------------------
+  Project Variables
+--------------------------- */
+/* --------------------------
+  Extended Styles
+--------------------------- */
+/* --------------------------
+  Mixins
+--------------------------- */
+/* --------------------------
+  Base Style Imports
+--------------------------- */
+/* --------------------------
+  Base Styles
+--------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+  color: #333;
+  font-family: Lato, sans-serif;
+}
+
+svg * {
+  transform-origin: 50% 50%;
+}
+
+.container {
+  display: block;
+  max-width: 450px;
+  margin: 30px auto 0;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #aaa;
+  background-color: whitesmoke;
+}
+
+/* --------------------------
+  List Styles
+--------------------------- */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Task list */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+li > label,
+li > input[type="text"] {
+  width: 200px;
+}
+
+li > .delete:hover {
+  color: #CF2323;
+}
+
+/* Completed */
+#completed-tasks label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* --------------------------
+  Components Style Imports
+--------------------------- */
+/* --------------------------
+  Logo Styles
+--------------------------- */
+.site-logo {
+  display: flex;
+  flex-direction: column;
+}
+.site-logo svg {
+  max-width: 150px;
+  margin: auto;
+}
+
+.monitor {
+  transform: translate3d(0, -512px, 0);
+}
+
+.text {
+  transform: translate3d(270px, 0, 0);
+}
+
+.check {
+  transform: translate3d(-225px, 0, 0);
+}
+
+.logo-text {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 75%;
+  margin: 2rem auto 0;
+  text-align: center;
+  border: 2px solid #242d3c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #F96232;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 2s forwards;
+}
+
+/* --------------------------
+  Form Element Styles
+--------------------------- */
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  font-family: Lato, sans-serif;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#new-task {
+  flex-grow: 1;
+}
+
+h3,
+label[for='new-task'] {
+  color: #555;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 1px solid #bbb;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+
+/* Edit Task */
+ul li input[type=text] {
+  display: none;
+}
+
+ul li.editMode input[type=text] {
+  display: block;
+}
+
+ul li.editMode label {
+  display: none;
+}
+
+/* --------------------------
+  Button Styles
+--------------------------- */
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+p > button:hover {
+  color: #0FC57C;
+}
+
+.icon {
+  max-width: 100%;
+}
+
+#add-item {
+  display: flex;
+  flex-direction: column;
+}
+#add-item button {
+  padding-right: 0;
+  max-width: 50px;
+}
+#add-item button:hover .icon {
+  filter: grayscale(0%);
+}
+#add-item .icon {
+  filter: grayscale(100%);
+  transition: filter .3s ease-out;
+  height: 50px;
+}
+
+#incomplete-tasks button,
+#completed-tasks button {
+  background-color: #ccc;
+  border-bottom: 2px solid #bbb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all .3s ease-out;
+}
+#incomplete-tasks .edit:hover,
+#completed-tasks .edit:hover {
+  background-color: #0FC57C;
+  border-bottom-color: #0dad6d;
+  color: #fff;
+}
+#incomplete-tasks .delete:hover,
+#completed-tasks .delete:hover {
+  background-color: tomato;
+  border-bottom-color: #ff4d2e;
+  color: #fff;
+}
+
+/* --------------------------
+  Animation Imports
+--------------------------- */
+/* --------------------------
+  Keyframe Animations
+--------------------------- */
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+}
+@keyframes slideDown {
+  50% {
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -25px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideIn {
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+/* --------------------------
+  Logo Animations
+--------------------------- */
+.monitor {
+  animation: slideDown 1s ease-out 0s forwards;
+}
+
+.screen-bg,
+.paper {
+  animation: grow 1s .6s backwards;
+}
+
+.paper {
+  animation-delay: .9s;
+}
+
+.text {
+  animation: slideIn .35s ease-out 1.9s forwards;
+}
+.text:nth-of-type(2) {
+  animation-delay: 1.6s;
+}
+.text:nth-of-type(3) {
+  animation-delay: 1.3s;
+}
+
+.check {
+  animation: slideIn .35s ease-out 1.9s forwards;
+}
+.check:nth-of-type(2) {
+  animation-delay: 1.6s;
+}
+.check:nth-of-type(3) {
+  animation-delay: 1.3s;
+}
+
+/*# sourceMappingURL=app.css.map */
